@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
 	{
 		Note::factory(10)->create();
 		Todo::factory(5)->create();
-		Todo::factory(5)->create(['status' => 'done']);
+		Todo::factory(5)->create(['status' => 'done', 'is_important' => true]);
 	}
 }

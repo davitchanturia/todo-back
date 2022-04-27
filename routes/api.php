@@ -22,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/todos', [TodoController::class, 'index'])->name('all.todos');
 Route::get('/notes', [NoteController::class, 'index'])->name('all.notes');
+Route::get('/todos/importants', [TodoController::class, 'importants'])->name('important.todos');
