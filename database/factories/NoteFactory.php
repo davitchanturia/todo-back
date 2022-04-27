@@ -20,7 +20,7 @@ class NoteFactory extends Factory
 		return [
 			'title'   => $this->faker->sentence(4),
 			'body'    => $this->faker->sentence(20),
-			'todo_id' => Todo::factory(),
+			'todo_id' => Todo::factory(['status' => 'in Progress']),
 		];
 	}
 }
