@@ -12,4 +12,11 @@ class NoteController extends Controller
 
 		return response()->json(['allNotes' => $allNotes]);
 	}
+
+	public function note($id)
+	{
+		$note = Note::where('id', $id)->first();
+
+		return response()->json(['note' => $note]);
+	}
 }

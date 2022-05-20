@@ -13,7 +13,7 @@ class StoreTodoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,11 @@ class StoreTodoRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-        ];
+        return $rules = [
+			'title'     => 'required',
+			'body'      => 'required',
+		];
+
+		return $rules;
     }
 }

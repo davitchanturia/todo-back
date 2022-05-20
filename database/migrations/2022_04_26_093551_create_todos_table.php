@@ -16,7 +16,7 @@ return new class extends Migration {
 			$table->id();
 			$table->text('title');
 			$table->text('body');
-			$table->boolean('is_important');
+			$table->boolean('is_important')->default(false);
 			$table->text('status');
 			$table->timestamps();
 		});

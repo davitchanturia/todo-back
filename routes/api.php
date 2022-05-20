@@ -21,5 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/todos', [TodoController::class, 'index'])->name('all.todos');
-Route::get('/notes', [NoteController::class, 'index'])->name('all.notes');
+Route::get('/todo/{id}', [TodoController::class, 'todo'])->name('certain.todo');
 Route::get('/todos/importants', [TodoController::class, 'importants'])->name('important.todos');
+Route::post('/add-todo', [TodoController::class, 'add'])->name('add.todo');
+
+Route::get('/notes', [NoteController::class, 'index'])->name('all.notes');
+Route::get('/note/{id}', [NoteController::class, 'note'])->name('certain.note');
