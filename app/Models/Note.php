@@ -9,6 +9,8 @@ class Note extends Model
 {
 	use HasFactory;
 
+	protected $guarded = [];
+
 	public function todos()
 	{
 		return $this->belongsTo(Todo::class);

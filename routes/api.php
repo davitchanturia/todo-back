@@ -27,3 +27,4 @@ Route::post('/add-todo', [TodoController::class, 'add'])->name('add.todo');
 
 Route::get('/notes', [NoteController::class, 'index'])->name('all.notes');
 Route::get('/note/{id}', [NoteController::class, 'note'])->name('certain.note');
+Route::post('/add-note', [NoteController::class, 'add'])->name('add.note');

@@ -13,7 +13,7 @@ class StoreNoteRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,12 @@ class StoreNoteRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-        ];
+        return $rules = [
+			'title'     => 'required',
+			'body'      => 'required',
+            'todoId'    => 'required'
+		];
+
+		return $rules;
     }
 }
